@@ -18,7 +18,7 @@ function Modal() {
 		}));
 	}
 	function submitTodo() {
-		if (label === "" || date === "")
+		if (label === "" || date === "" || description==="")
 			return toast.warning("Veuillez remplir les champs");
 		fetch(`${BASE_URL}/todo/add`, {
 			method: "POST",
